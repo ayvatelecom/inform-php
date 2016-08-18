@@ -41,6 +41,10 @@ class AyvaInformAPI {
         return $this->method('send',$params);
     }
 
+    public function getCalls($params){
+        return $this->method('getCalls',$params);
+    }
+
     private function method($method,$params = '{}'){
         if(is_array($params)){
             $params = json_encode($params);
